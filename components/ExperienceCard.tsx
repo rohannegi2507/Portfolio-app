@@ -21,14 +21,14 @@ transition—opacity duration—200 overflow-hidden'>
       transition={{duration:1.2}}
       whileInView={{opacity:1, y:0}}
       className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
-      src={urlFor(experience?.companyImage).url()}>  
+      src={experience?.companyImage && urlFor(experience?.companyImage).url()}>  
     </motion.img>
 
     <div className='px-0 md:px-10'>
       <h4 className='text-4xl font-light '>{experience.jobTitle}</h4>
       <p className='text-2xl mt-1  font-bold'>{experience.company}</p>
       <div className='flex flex-row space-x-2 my-2'>
-        {experience.technologies.map((skill)=>{
+        {experience.technologies?.map((skill)=>{
           return (
             <img alt="test" key={skill._id} className='h-10 w-10 rounded-full object-cover' src={skill.image && urlFor(skill.image).url()}></img>
         )})}
@@ -39,7 +39,7 @@ transition—opacity duration—200 overflow-hidden'>
         {experience.isCurrentWorkingHere ? "Present" : new Date(experience?.dateEnded).toDateString()}
         </p>
       <ul className='list-disc space-y-4 ml-4 text-lg '>
-        {experience.points.map((point, index)=>{
+        {experience.points?.map((point, index)=>{
         return (
           <li key={index}>{point}</li>
         )

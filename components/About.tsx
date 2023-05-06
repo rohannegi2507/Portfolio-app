@@ -27,8 +27,8 @@ const About = ({pageInfo}: Props) => {
           object-cover
           md:rounded-lg 
            md:w-64 md:h-95
-            xl:h-[600px] xl:w-[500px] "
-         src={pageInfo.profilePic && urlFor(pageInfo.profilePic).url()}
+           xl:h-[600px] xl:w-[500px] "
+         src={pageInfo?.profilePic && urlFor(pageInfo?.profilePic).url()}
         />
    <div className='space-y-10 px-0 md:px-10'>
      <h4 className='text-4xl font-semibold'>Here is Little Background</h4>

@@ -46,6 +46,11 @@ export default {
         title:'Points',
         type:'array',
         of:[{type:"string"}]
-    }
+    },
+    {
+        name:'order',
+        title:'order',
+        type:'number',
+    },
 ]
 }
