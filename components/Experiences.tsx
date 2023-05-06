@@ -8,6 +8,10 @@ type Props = {
 }
 
 const Experiences = ({experiences}: Props) => {
+//   const data:Experience[] = experiences.sort((exp1:Experience, exp2: Experience):number=>
+//      exp1.isCurrentWorkingHere ? 1 : -1
+//  )
+console.log("testing-exp", experiences)
   return (
     <motion.div 
     initial={{opacity:0}}
@@ -26,9 +30,9 @@ const Experiences = ({experiences}: Props) => {
         p-10 snap-x snap-mandatory
           scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]
       '>
-        {experiences.map((experience: Experience, index: number)=>{
+        {experiences?.map((experience: Experience, index: number)=>{
           return (
-            <ExperienceCard key={index} experience={experience}/>
+            <ExperienceCard key={experience.order} experience={experience}/>
           )
         })
         }

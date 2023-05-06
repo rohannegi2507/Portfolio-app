@@ -25,7 +25,7 @@ const Contact = (props: Props) => {
 
 <div className='flex flex-col space-y-2'>
   {/* <h4 className='text-2xl font-semibold  text-center text-[#F7AB0A]'> Send me a message! </h4> */}
-<div className='space-y-10 mb-4'>
+<div className='space-y-4 mb-4'>
     <div className='flex items-center space-x-5 justify-center'>
         <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
         <p className='text-2xl'>+91 9626382220</p>
